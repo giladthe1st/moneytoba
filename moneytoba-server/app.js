@@ -19,10 +19,13 @@ mongoose.connect(process.env.MONGO_URI, {
 //middleware
 app.use(cors({origin: true, credentials: true}));
 app.use(morgan('dev'))
-
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+app.use(require("cookie-parser")())
+app.use("/auth/", require("./routes/auth"))
 //routes
-const testRoutes  = require('./routes/test')
-app.use('/test', testRoutes)
+
+
 
 //port
 const port = process.env.PORT || 8080

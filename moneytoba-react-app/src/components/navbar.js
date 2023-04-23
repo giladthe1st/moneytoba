@@ -4,7 +4,6 @@ import './Navbar.css';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleLogout = () => {
-    // Perform any necessary cleanup on logout
     setIsLoggedIn(false);
   };
 
