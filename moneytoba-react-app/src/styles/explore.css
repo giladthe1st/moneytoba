@@ -1,0 +1,38 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.services div {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.services h3 {
+  margin-bottom: 0.5rem;
+}
+
+.services p {
+  margin-bottom: 1rem;
+}
+
+.services a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #4caf50;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.services a:hover {
+  background-color: #3f9645;
+}

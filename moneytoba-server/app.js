@@ -23,6 +23,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(require("cookie-parser")())
 app.use("/auth/", require("./routes/auth"))
+app.use('/api/neighborhoods', require('./routes/neighborhoods'));
 //routes
 
 

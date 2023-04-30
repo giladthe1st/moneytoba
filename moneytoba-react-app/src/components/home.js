@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import './home.css';
+import '../styles/home.css';
+import Explore from './explore';
 
 function Home() {
   const location = useLocation();
@@ -9,11 +10,11 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to MoneyToba!</h1>
+      <h1 className="home-title">Welcome to Moneytoba!</h1>
       {successMessage && (
         <div className="success-message">{successMessage}</div>
       )}
-      {/* <p className="home-content">{data}</p> */}
+      <Explore />
     </div>
   );
 }

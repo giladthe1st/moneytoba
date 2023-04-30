@@ -1,0 +1,46 @@
+.neighbourhoods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.neighbourhoods-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.neighbourhoods-list {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  /* Add the following lines */
+  height: 800px; /* Set a fixed height, adjust to match the map's height */
+  overflow-y: auto; /* Enable scrolling when content overflows */
+}
+
+.map-container {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1%;
+  position: relative; /* Add this property to create a new stacking context */
+}
+
+.search-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+
+.map-container .gmap {
+  width: 100%;
+  height: 600px;
+}

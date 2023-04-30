@@ -1,0 +1,5 @@
+# Ignore server .env file
+moneytoba-server/.env
+
+# Ignore client .env file
+moneytoba-react-app/.env

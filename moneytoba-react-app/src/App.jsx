@@ -10,7 +10,8 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import Login from './components/login';
 import Register from './components/register';
-
+import Explore from './components/explore';
+import Neighbourhoods from './components/neighbourhoods';
 
 //google api key AIzaSyCaSp4GgGVBJpyNnfpOMfIPerJIsoMerWA
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/neighborhoods" element={<Neighbourhoods />} />
         </Routes>
       </div>
     </Router>
