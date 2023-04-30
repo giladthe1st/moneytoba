@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import './home.css';
+import '../styles/home.css';
 import Explore from './explore';
 
 function Home() {

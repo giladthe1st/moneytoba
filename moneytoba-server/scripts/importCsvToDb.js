@@ -59,6 +59,7 @@ async function saveNeighborhoodData(row) {
 // Import CSV data to MongoDB
 async function importCsvToDb(mongoUri, csvFilePath) {
   await connectToMongoDB(mongoUri);
+  deleteNeighborhoodData()
 
   const readStream = fs.createReadStream(csvFilePath);
   const promises = [];
@@ -82,6 +83,16 @@ async function importCsvToDb(mongoUri, csvFilePath) {
       console.error('Error reading CSV file:', error.message);
       mongoose.connection.close();
     });
+}
+
+//delete all records before rerunning to prevent duplicates
+async function deleteNeighborhoodData() {
+  try {
+    await Neighborhood.deleteMany({});
+    console.log('All documents deleted from Neighborhood collection');
+  } catch (error) {
+    console.error('Error deleting documents from Neighborhood collection:', error.message);
+  }
 }
 
 // Main function
